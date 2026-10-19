@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SaleController;
 use Illuminate\Support\Facades\Route;
 
 // Soal 1.a: Pengiriman data NIM dan Nama melalui form dengan metode POST
@@ -31,3 +35,14 @@ Route::get('/grades', function () {
 Route::get('/assignments', function () {
     return view('assignments');
 });
+
+// Soal 2.d: Menampilkan setiap data yang ada pada tabel menggunakan Controller (tanpa view)
+Route::resource('customers', CustomerController::class);
+Route::resource('companies', CompanyController::class);
+Route::resource('items', ItemController::class);
+Route::resource('sales', SaleController::class);
+
+Route::resource('customer', CustomerController::class);
+Route::resource('company', CompanyController::class);
+Route::resource('item', ItemController::class);
+Route::resource('sale', SaleController::class);
