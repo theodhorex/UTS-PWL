@@ -41,8 +41,3 @@ Route::resource('customers', CustomerController::class);
 Route::resource('companies', CompanyController::class);
 Route::resource('items', ItemController::class);
 Route::resource('sales', SaleController::class);
-
-Route::resource('customer', CustomerController::class);
-Route::resource('company', CompanyController::class);
-Route::resource('item', ItemController::class);
-Route::resource('sale', SaleController::class);
